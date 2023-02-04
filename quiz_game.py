@@ -1,40 +1,54 @@
-print("Welcome to my computer quiz!")
+print("Kuis Pengetahuan Umum")
 
-playing = input("Do you want to play? ")
+playing = input("Apakah kamu mau bermain?(yes/no) ")
 
 if playing.lower() != "yes":
     quit()
 
-print("Okay! Let's play :)")
+print("Oke! Mari bermain :3")
 score = 0
 
-answer = input("What does CPU stand for? ")
-if answer.lower() == "central processing unit":
-    print('Correct!')
+print("====================")
+answer = input("Siapa menteri pendidikan sekarang? ")
+if answer.lower() == "nadiem makarim":
+    print('Jawaban kamu benar!')
     score += 1
 else:
-    print("Incorrect!")
+    print("Jawaban kamu salah!")
 
-answer = input("What does GPU stand for? ")
-if answer.lower() == "graphics processing unit":
-    print('Correct!')
+print("====================")
+answer = input("Binatang yang bisa hidup di darat dan di air disebut? ")
+if answer.lower() == "amfibi":
+    print('Jawaban kamu benar!')
     score += 1
 else:
-    print("Incorrect!")
+    print("Jawaban kamu salah!")
 
-answer = input("What does RAM stand for? ")
-if answer.lower() == "random access memory":
-    print('Correct!')
+print("====================")
+answer = input("Negara terluas keempat di Dunia adalah? ")
+if answer.lower() == "china":
+    print('Jawaban kamu benar!')
     score += 1
 else:
-    print("Incorrect!")
+    print("Jawaban kamu salah!")
 
-answer = input("What does PSU stand for? ")
-if answer.lower() == "power supply":
-    print('Correct!')
+print("====================")
+answer = input("Gunung tertinggi di Dunia adalah? ")
+if answer.lower() == "gunung everest":
+    print('Jawaban kamu benar!')
     score += 1
 else:
-    print("Incorrect!")
+    print("Jawaban kamu salah!")
+    
+print("====================")    
+answer = input("Arah jam 9 itu sama dengan arah mata angin ke? ")
+if answer.lower() == "barat":
+    print('Jawaban kamu benar!')
+    score += 1
+else:
+    print("Jawaban kamu salah!")
 
-print("You got " + str(score) + " questions correct!")
-print("You got " + str((score / 4) * 100) + "%.")
+print("===================")
+print("Kamu berhasil menjawab " + str(score) + " pertanyaan dengan benar!")
+print("Kamu mendapatkan nilai " + str((score / 5) * 100) + "%.")
+print("===================")
