@@ -3,37 +3,50 @@ import random
 user_wins = 0
 computer_wins = 0
 
-options = ["rock", "paper", "scissors"]
+opsi = ["batu", "kertas", "gunting"]
 
 while True:
-    user_input = input("Type Rock/Paper/Scissors or Q to quit: ").lower()
+    user_input = input("Pilih Batu/Kertas/Gunting atau Q untuk keluar: ").lower()
     if user_input == "q":
         break
-
-    if user_input not in options:
+    
+    if user_input not in opsi:
         continue
 
-    random_number = random.randint(0, 2)
-    # rock: 0, paper: 1, scissors: 2
-    computer_pick = options[random_number]
-    print("Computer picked", computer_pick + ".")
+    random_number = random.randint(0, 2)# batu: 0, kertas: 1, gunting: 2
+    computer_pick = opsi[random_number]
+    print("Komputer memilih:", computer_pick + ".")
 
-    if user_input == "rock" and computer_pick == "scissors":
-        print("You won!")
+    if user_input == "batu" and computer_pick == "gunting":
+        print("Kamu menang!")
         user_wins += 1
 
-    elif user_input == "paper" and computer_pick == "rock":
-        print("You won!")
+    elif user_input == "kertas" and computer_pick == "batu":
+        print("Kamu menang!")
         user_wins += 1
 
-    elif user_input == "scissors" and computer_pick == "paper":
-        print("You won!")
+    elif user_input == "gunting" and computer_pick == "kertas":
+        print("Kamu menang!")
         user_wins += 1
+        
+    elif user_input == "gunting" and computer_pick == "gunting":
+        print("Seri!")
+        user_wins += 0
+        
+    elif user_input == "kertas" and computer_pick == "kertas":
+        print("Seri!")
+        user_wins += 0
+        
+    elif user_input == "batu" and computer_pick == "batu":
+        print("Seri!")
+        user_wins += 0
 
     else:
-        print("You lost!")
+        print("Kamu kalah!")
         computer_wins += 1
 
-print("You won", user_wins, "times.")
-print("The computer won", computer_wins, "times.")
-print("Goodbye!")
+print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=")
+print("Kamu menang", user_wins, "kali.")
+print("Komputer menang", computer_wins, "kali.")
+print("Dadah! Terima kasih sudah bermain:3")
+print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=")
